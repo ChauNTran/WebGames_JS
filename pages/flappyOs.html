@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Chau's Web Games</title>
+      <script type="text/javascript" src="1/js/flappy.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+      <style>
+         #mainContainer
+         {
+            width: 1000px;
+            height: 600px;
+            position: relative;
+         }
+         #gameContainer
+         {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+         }
+         #uiContainer
+         {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            user-select: none;
+         }
+         #startScreen{
+            width : 35%;
+            margin: auto;
+
+         }
+         #mainScreen {
+         }
+         #scoreBox {
+            position:absolute;
+            top: 1em;
+            left:1em;
+         }
+         #endScreen{
+            width : 35%;
+            margin: auto;
+         }
+         .panel
+         {
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: black;
+            border-radius: 0.5em;
+            padding: 1em;
+            margin-top: 30%;
+         }
+         .box{
+            display: flex;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: black;
+            border-radius: 0.5em;
+            padding: 1em;
+            color: #DF4601;
+         }
+         .game-button {
+            font-size: 2em;
+            padding: 0.4em;
+            border-radius: 1em;
+            background-color: #DF4601;
+            cursor:pointer;
+         }
+         .title {
+            font-size: 4em;
+            margin: 0.5em 0.2em;
+            color: #DF4601;
+         }
+         .normal-text {
+            font-size: 2em;
+            color: #DF4601;
+         }
+         .marck-script-regular {
+            font-family: "Marck Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+         }
+         .center {
+            display: flex;
+            justify-content: center;
+         }
+         .hide{
+            display: none;
+         }
+         .mask{
+            mask-size: 100% 100%;
+            mask-position: center;
+            mask-composite: exclude;
+         }
+
+
+      </style>
+
+      <script type="text/javascript">
+         window.onload = function(){
+            packed.loadGame();
+         }
+      </script>
+
+
+   </head>
+   <body>
+      <div id='mainContainer'>
+         <div id='uiContainer'>
+            <div id="startScreen">
+               <div class="panel" >
+                  <div class="title marck-script-regular center">Flappy O's</div>
+                  <div id="startButton" class="game-button marck-script-regular center">
+                     Start Game
+                  </div> 
+               </div> 
+            </div>
+            
+            <div id="mainScreen">
+               <div id="scoreBox" class="box marck-script-regular" >
+                  <div class="normal-text">Score</div>
+                  <text class="normal-text" id="score">
+                     0
+                  </text> 
+               </div> 
+            </div>
+
+            <div id="endScreen">
+               <div class="panel marck-script-regular" >
+                  <div class="normal-text">Total Score</div>
+                  <text class="normal-text" id="finaScore">
+                     0
+                  </text> 
+                  <div id="playAgainButton" class="game-button marck-script-regular center">
+                     Play Again
+                  </div> 
+               </div> 
+            </div>
+
+         </div>
+         <div id='gameContainer'>
+         </div>
+         <div class="mask"></div>
+      </div>
+
+   </body>
+</html>

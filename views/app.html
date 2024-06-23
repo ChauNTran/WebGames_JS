@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>BV CMS</title>
+    <script type="text/javascript" src="{{STATIC_ASSETS_BASE_URL}}/{{JS_VERSION}}/js/app.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <script>
+       /*
+       window.globals = {
+          idUser: '{{idUser}}',
+          isAdmin: {{isAdmin}},
+          isSponsor: {{isSponsor}},
+          hasCompletedIntro: {{hasCompletedIntro}},
+          cardType: '{{cardType}}',
+          pageTestVersion: '{{pageTestVersion}}',
+          STATIC_ASSETS_BASE_URL: '{{STATIC_ASSETS_BASE_URL}}',
+          USER_UPLOADS_BASE_URL: '{{USER_UPLOADS_BASE_URL}}',
+          socketConnection: '{{socketConnection}}',
+       }
+
+       var alertText = '{{alertText}}';
+       if(alertText){
+          alert(alertText);
+       }
+       */
+    </script>
+
+    <style>
+        .single-line-text-field{
+            margin-right: 1em;
+            margin-bottom: 1em;
+        }
+
+        .item-list{
+            max-height: 20em;
+            overflow-y: scroll;
+        }
+        #pageContainer{
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .input-field{
+            margin: 1em !important;
+        }
+
+        .input-field.multi-line{
+            width: 30em;
+        }
+
+        #appSettingsContainer .input-group.row{
+            display: flex;
+        }
+
+        #appSettingsContainer .input-group.row .multi-line{
+            margin-top: 0 !important;
+        }
+
+        #unsavedChangesButton{
+            position: fixed;
+            right: 3em;
+            top: 2em;
+        }
+
+        #unsavedChangesContainer{
+            padding: 1em;
+            font-size: 17px;
+
+        }
+
+        #unsavedChangesContainer div{
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+
+        #saveAllButton{
+            position: fixed;
+            right: 3em;
+            bottom: 2em;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div id='reactContainer'>
+    <!-- react renders here -->
+</div>
+
+</body>
+</html>
